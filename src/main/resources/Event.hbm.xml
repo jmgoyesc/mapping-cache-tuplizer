@@ -1,9 +1,7 @@
-<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping"
-                   xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping http://hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" package="com.personal.hiberante.model">
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm" package="com.personal.hiberante.model">
     <class name="Event" table="Event">
-        <cache usage="read-write"/>
         <tuplizer class="org.hibernate.tuple.entity.PojoEntityTuplizer"/>
+        <cache usage="read-write"/>
         <id name="id" type="java.lang.String">
             <column name="ID"/>
             <generator class="identity"/>
@@ -12,5 +10,4 @@
             <column name="name"/>
         </property>
     </class>
-
 </hibernate-mapping>
