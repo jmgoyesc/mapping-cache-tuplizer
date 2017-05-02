@@ -1,0 +1,16 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping"
+                   xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping http://hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" package="com.personal.hiberante.model">
+    <class name="Event" table="Event">
+        <cache usage="read-write"/>
+        <tuplizer class="org.hibernate.tuple.entity.PojoEntityTuplizer"/>
+        <id name="id" type="java.lang.String">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name"/>
+        </property>
+    </class>
+
+</hibernate-mapping>
